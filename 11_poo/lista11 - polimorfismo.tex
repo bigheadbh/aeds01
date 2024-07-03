@@ -1,0 +1,63 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{multicol}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \bf Lista de Exercícios 11}
+\end{center}
+
+\begin{enumerate}
+	\item Implemente a classe \texttt{Funcionario} e a classe \texttt{Gerente}.\\
+	a. crie a classe \texttt{Assistente}, que também é um funcionário, e que possui um número de matrícula (faça o método GET). Sobrescreva o método \texttt{exibeDados()}.\\
+	b. sabendo que os Assistentes Técnicos possuem um bônus salarial e que os Assistentes Administrativos possuem um turno (dia ou noite) e um adicional noturno, crie as classes \texttt{Tecnico} e \texttt{Administrativo}.
+
+	\item Faça uma classe Animal com um método abstrato ``fala''. Faça as classes Homem, Cão e Gato, herdando de animal, redefinindo o método ``fala'' para retornar ``Oi'', ``Au au'' e ``Miau'', respectivamente. Crie um vetor de $10$ Animais e instancie Homens, Cães e Gatos nesse vetor. Faça um loop por todos os animais do vetor, pedindo para eles falarem. 
+	
+	\item Crie uma classe para representar uma conta corrente, com métodos para depositar uma quantia, sacar uma quantia e obter o saldo. Para cada saque será debitada também uma taxa de operação equivalente à $0,5$\% do valor sacado. Crie, em seguida, uma subclasse desta classe anterior para representar uma conta corrente de um cliente especial. Clientes especiais pagam taxas de operação de apenas $0,1$\% do valor sacado. Faça testes com as duas classes e verifique seus resultados.
+
+	\item Crie uma hierarquia de classes de domínio para uma loja que venda livros, CDs e DVDs. Sobrescreva o método \texttt{toString()} para que imprima:\\
+	- Para livros: nome, preço e autor;\\
+	- Para CDs: nome, preço e número de faixas;\\
+	- Para DVDs: nome, preço e duração. \\
+	Evite ao máximo repetição de código utilizando o construtor da classe principal e no método sobrescrito. Em seguida, crie uma classe Loja com um método principal que adicione 5 produtos diferentes (a sua escolha) a um vetor e, por fim, imprima o conteúdo do vetor.
+
+	\item Criar uma estrutura hierárquica que contenha as seguintes classes: Veiculo, Bicicleta e Automóvel. Os métodos da classe Veiculo são todos virtuais puros e possuem a seguinte assinatura: \texttt{listarVerificacoes(), ajustar() e limpar()}. Estes métodos são implementados nas subclasses Automóvel e Bicicleta. Acrescentar na classe Automóvel o método \texttt{mudarOleo()}.
+\end{enumerate}
+
+\end{document}

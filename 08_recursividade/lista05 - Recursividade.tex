@@ -1,0 +1,74 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \bf Lista de Exercícios 05}
+\end{center}
+
+\begin{enumerate}
+	\item Fazer um método recursivo que recebe um número inteiro e retorna o seu fatorial.
+	
+	
+	\item Fazer um método recursivo que recebe um número inteiro n e retorna o n-ésimo termo da equação de recorrência abaixo:
+
+	$T(1) = 2$
+
+	$T(2) = 3$
+
+	$T(n) = 5 * n + T(n - 1)^{n}$
+
+
+	\item Fazer um método recursivo que recebe um número inteiro e positivo n e calcula o somatório abaixo.
+
+	$n + (n-1) + ... + 1 + 0$
+
+	\item Fazer um método recursivo que imprima de um número natural em base binária
+	
+	\item Fazer um método recursivo que multiplique dois números naturais, através de somas sucessivas
+	
+	\item Fazer um método recursivo que calcule o MDC (máximo divisor comum) de dois inteiros positivos $m$ e $n$
+	
+	\item Fazer um método recursivo que conte os dígitos de um determinado número.
+	
+	\item Fazer um método recursivo que determine se um número é ou não primo.
+	
+	
+\end{enumerate}
+
+\end{document}

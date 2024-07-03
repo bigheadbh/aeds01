@@ -1,0 +1,78 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \bf Lista de Exercícios 03}
+\end{center}
+
+\begin{enumerate}
+	\item Fazer um programa para ler $n$ números inteiros e imprimir a soma deles. O $n$ valor de deve ser lido do teclado.
+
+    \item Faça um programa que imprima os L primeiros elementos da serie de Fibonacci.
+
+    \item Faça um programa que imprima todos os elementos da série de Fibonacci menores que L.
+
+    \item Faça um programa que calcule o n-ésimo elemento de uma progressão geométrica (PG) e o imprima na tela. O usuário deve entrar com os valores da razão e do $1^{\underline{o}}$ termo da PG. Lembre-se que uma PG é dada pela seguinte fórmula: $a_{n} = a_{1} * q^{n-1}$, onde $a_{n}$ é o n-ésimo elemento da PG, $a_{1}$ é o $1^{\underline{o}}$ elemento da PG e $q$ é a razão.
+	\begin{itemize}
+		\item Mostre o algoritmo pedido.
+		\item Mostre o algoritmo pedido sem utilizar a operação de exponenciação.
+		\item Mostre o algoritmo pedido sem utilizar as operações de exponenciação e multiplicação.
+	\end{itemize}
+
+    \item Faça um programa para imprimir os múltiplos de 5.
+
+    \item Faça um programa para ler uma mensagem do teclado e criptografá-la utilizando o ciframento de César.\ Nesse caso,\ cada caractere da mensagem deve ser substituído pelo caractere cujo código ASCII é igual ao seu mais uma constante K (lida do teclado).
+
+    \item Faça um programa para calcular o $N$-ésimo termo da sequência de Fibonacci (1,\ 1,\ 2,\ 3,\ 5,\ 8,\ 13,\ 21,\ ...).
+
+    \item Os alunos de uma turma com $numAlunoS$ fizeram $numProva$ provas.\ Leia cada uma das $numProva$ provas feitas por cada um dos $numAlunoS$ alunos.\ Imprima na tela: a média de cada aluno,\ a média da turma e o percentual dos alunos que tiveram média maior ou igual a 80\%.
+
+    \item Leia um número inteiro I e um número real R. Enquanto I maior que 10, imprima o valor de I na tela, decremente o valor de I em duas unidades e enquanto R menor que 10, imprima os valores de R e I na tela e incremente o valor de R em uma unidade.
+
+	\item Faça um programa que mostre na tela os n primeiros elementos da sequência 1, 3, 5, 7, 9,...
+
+	\item Faça um programa que mostre na tela os n primeiros elementos da sequência anterior que forem divisíveis por três AND múltiplos de cinco OR divisíveis por sete
+	
+	\item Seja a sequência da questão anterior, mostre somente os elementos maiores que \textit{a} e menores que \textit{b}, onde \textit{a} e \textit{b} são lidos do teclado.
+	
+	\item Faça um programa que leia um caractere e se esse for uma letra maiúscula, imprima ``Maiúscula''. Senão, se ele for uma letra minúscula, imprima ``Minúscula''. Senão, se for um dígito, imprima dígito. Senão imprima ``Outro caractere''.
+
+\end{enumerate}
+
+\end{document}

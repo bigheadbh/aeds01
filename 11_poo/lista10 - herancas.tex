@@ -1,0 +1,80 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{multicol}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \bf Lista de Exercícios 10}
+\end{center}
+
+\begin{enumerate}
+	\item Crie uma classe chamada NotaFiscal que um hardware utilize para representar uma nota fiscal em uma loja de peças. Uma nota fiscal deve incluir quatro dados como atributos:
+	\begin{itemize}
+		\item[a.] Número da peça (string);
+		\item[b.] Descrição da peça (string); 
+		\item[c.] Quantidade comprada (inteiro);
+		\item[d.] Preço (número real).
+	\end{itemize}
+
+	A classe deve incluir ainda getters e setters para cada um dos atributos. Ainda, deve haver um método getTotalNota que calcule e retorne o total de um vetor de objetos. Escreva um programa que teste cada um dos métodos da classe.
+
+	\item Crie uma classe Empregado que inclua os atributos nome (string), sobrenome (string) e salário mensal (número real). A classe deve incluir construtores para cada um dos atributos para evitar lixo e também getters e setters. Crie um programa que teste a classe, criando dois objetos, calculando o salário anual de cada, dando um aumento de 10\% e calcule o salário anual novamente.
+	
+	\item Crie uma classe Aluno com atributos que armazenem o nome, a série que cursa e o grau. Crie um getter e um setter, além de uma variável static que conte a quantidade de objetos criados, a ser utilizada no construtor e destrutor. Crie um vetor com 15 objetos desta classe e preencha os dados através do setter.
+	
+	\item Crie uma classe Estacionamento para armazenar dados de um estacionamento. Os atributos devem representar a placa e modelo do carro além da hora de entrada e saída do estacionamento. Utilize dois objetos da classe Tempo criada no exercício anterior. Crie métodos para:
+	\begin{itemize}
+		\item[a.] Funcionar como getter e setter;
+		\item[b.] Inicializar os dados com vazio ou zero;
+		\item[c.] Imprimir os dados de um carro estacionado;
+		\item[d.] Calcular e retornar o valor a ser pago pelo carro estacionado. Considere o preço de R\$1,50 por hora. Utilize o método da classe Tempo.
+	\end{itemize}
+	Crie um vetor de 5 posições e preencha-o para testar sua classe.
+
+	\item Crie a classe Veiculo, contendo o peso, a velocidade máxima, e o preço. Inclua um construtor sem argumentos e um com argumentos para inicialização dos atributos. Crie métodos que funcionem como getter e setter e print.  
+
+	Crie a classe Motor, contendo o número de cilindros e a potência. Inclua um construtor sem argumentos e um com argumentos para inicialização dos atributos. Crie métodos que funcionem como getter e setter e print.  
+
+	Crie a classe CarroPasseio, derivada das classes Veiculo e Motor. Inclua atributos como modelo e cor. Crie um construtor para esta classe que chame explicitamente o construtor das classes base, um getter e um setter, além de um método print, que utiliza o método print da classe base. Crie um driver para testar sua aplicação.
+
+	\item Crie a classe Caminhao, derivada das classes Motor e Veiculo. Inclua os atributos toneladas, altura máxima e comprimento. Crie um construtor para esta classe que chame explicitamente o construtor das classes base, um getter e um setter, além de um método print, que utiliza o método print da classe base. Crie um driver para testar sua aplicação.
+	
+	\item Crie uma classe utilitária (Utils) com um método para converter temperaturas em graus Fahrenheit para graus Celsius (toCelsius()), ambas representadas em ponto-flutuante	(double). Porém, caso o valor a ser	convertido seja menor que zero absoluto (-459,67°F) deve-se lançar a exceção.
+\end{enumerate}
+
+\end{document}

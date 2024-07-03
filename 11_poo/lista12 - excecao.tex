@@ -1,0 +1,61 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{multicol}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \bf Lista de Exercícios 12}
+\end{center}
+
+\begin{enumerate}
+  \item Explique detalhadamente o $try$,$catch$,$finally$.
+
+  \item Num programa que lê um valor inteiro, faça a sua validação através do tratamento de uma exceção. Caso não seja inteiro continuar pedindo a introdução do valor inteiro.
+
+	\item Crie um programa que receba n números e some esses numeros enquanto a soma não for superior a $100$. O programa deverá imprimir o valor somado (antes de atingir o número maior que $100$) e deverá informar quantos números foram   somados e qual a média. Refaça seu programa utilizando as seguintes regras:\\
+  a. Utilize os tratamentos de exceção para lidar com a entrada de dados.\\
+  b. Quando a soma for superior a $100$, o programa deverá gerar uma exceção criada pelo programador (veja transparência da aula pra ver como fazer), com nome \texttt{ExcecaoAcimaDeCem}.\\
+  c. Lance essa exceção, com o uso de throws.\\
+
+  \item Escreva um programa para preencher valores de um vetor de inteiros com $10$ posições. O usuário irá informar os valores a serem inseridos e suas respectivas posições no array. O programa deve tratar as exceções \texttt{ArrayIndexOutOfBoundsException} quando for informada uma posição inexistente do vetor e \texttt{NumberFormatException} quando o valor informado não for numero.
+
+  \item Escreva um programa que leia três valores com ponto flutuante de dupla precisão: $A$, $B$ e $C$. Em seguida, calcule e mostre a área do triângulo retângulo que tem A por base e C por altura. Se não for possível formar um triangulo, favor levantar uma exceção.
+	
+\end{enumerate}
+
+\end{document}

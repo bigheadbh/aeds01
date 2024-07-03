@@ -1,0 +1,203 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\definecolor{myblue}{cmyk}{0.04, 0.13, 0.04, 0.04, 1.00}
+
+\newcommand{\inexample}[1]{	
+	\begin{tcolorbox}
+	\begin{minipage}{0.90\textwidth}
+	\textsc{\textbf{Exemplo Entrada}}\\
+	\texttt{#1}
+	\end{minipage}
+	\end{tcolorbox}
+	}
+
+\newcommand{\example}[1]{	
+	\begin{tcolorbox}[colback = myblue]
+	\begin{minipage}{0.90\textwidth}
+	\textsc{\textbf{Saída Esperada:}}\\
+	\texttt{#1}
+	\end{minipage}
+	\end{tcolorbox}
+	}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \bf Lista  E X T R A - Ponteiros}
+\end{center}
+
+\begin{enumerate}
+	
+	\item Escreva um programa em C para demonstrar como lidar com os ponteiros do programa. 
+	\example{Endereço de m : 0x7ffcc3ad291c\\
+	Valor de m : 29\\
+	\\                                      
+	Agora ab é atribuído com o endereço de m.\\                       
+	Endereço do ponteiro ab : 0x7ffcc3ad291c\\                      
+	Conteúdo do ponteiro ab : 29}                                   
+	
+	\item Escreva um programa em C para demonstrar o uso do operador \& (endereço de) e \* (valor no endereço).
+	
+	\item Escreva um programa em C para somar dois números usando ponteiros.
+	\inexample{Entre com o primeiro número: 5\\
+	Entre com o segundo número: 6}
+	\example{A soma dos números informados: 11}
+
+	\item Escreva um programa em C para adicionar números usando chamada por referência. 
+	\inexample{Entre com o primeiro número: 5\\
+	Entre com o segundo número: 6}
+	\example{A soma de 5 e 6 é 11} 
+
+	\newpage 
+	\item Escreva um programa em C para encontrar o número máximo entre dois números usando um ponteiro. 
+	\inexample{Entre com o primeiro número: 5\\
+	Entre com o segundo número: 6}
+	\example{6 é o maior valor.} 
+
+	\item Escreva um programa em C para armazenar n elementos em um vetor e imprimir os elementos usando um ponteiro.
+	\inexample{Insira o número de elementos a serem armazenados no vetor: 5 \\
+	Insira 5 números de elementos no vetor:\\
+	elemento - 0 : 5\\
+	elemento - 1 : 7\\
+	elemento - 2 : 2\\
+	elemento - 3 : 9\\
+	elemento - 4 : 8}
+	\example{Os elementos que você inseriu são:
+	elemento - 0 : 5\\    
+	elemento - 1 : 7\\    
+	elemento - 2 : 2\\    
+	elemento - 3 : 9\\     
+	elemento - 4 : 8} 
+
+	\item Escreva um programa em C para imprimir todas as permutações de uma determinada string usando ponteiros.
+	\example{As permutações da string são:\\
+	abcd  abdc  acbd  acdb  adcb  adbc  bacd  badc  bcad  bcda  bdca  bdac  cbad  cbda  cabd  cadb  cdab  cdba  db ca  dbac  dcba  dcab  dacb  dabc}
+
+	\item Escreva um programa em C para encontrar o maior elemento usando a Alocação de Memória Dinâmica.
+	\inexample{Insira o número total de elementos (1 a 100): 5\\
+	Número 1: 5\\
+	Número 2: 7\\
+	Número 3: 2\\
+	Número 4: 9\\
+	Número 5: 8}
+	\example{O maior elemento é: 9.00} 
+
+	\item Escreva um programa em C para calcular o comprimento da string usando um ponteiro.
+
+	\item Escreva um programa em C para trocar elementos usando chamada por referência. 
+	\inexample{Insira o valor do primeiro elemento: 5\\
+	Insira o valor do segundo elemento: 6\\
+	Insira o valor do terceiro elemento: 7}
+	\example{Os valores antes da troca são:\\                                  
+	elemento 1 = 5\\      
+	elemento 2 = 6\\      
+	elemento 3 = 7\\
+	Os valores após a troca são:\\                                   
+	elemento 1 = 7\\      
+	elemento 2 = 5\\       
+	elemento 3 = 6}
+
+	\item Escreva um programa em C para encontrar o fatorial de um determinado número usando ponteiros. 
+	\inexample{	Número de entrada: 5}
+	\example{O fatorial de 5 é: 120} 
+
+	\item Escreva um programa em C para contar o número de vogais e consoantes em uma string usando um ponteiro. 
+	\inexample{String de entrada: string}
+	\example{Número de vogais: 1 \\
+	Número de consoantes: 5}
+	
+	\newpage
+	\item Escreva um programa em C para ordenar um array usando ponteiro. 
+	\inexample{Insira o número de elementos a serem armazenados no vetor: 5\\
+	Insira 5 números de elementos no vetor:\\
+	elemento - 1 : 25\\
+	elemento - 2 : 45\\
+	elemento - 3 : 89\\
+	elemento - 4 : 15\\
+	elemento - 5 : 82}
+
+	\example{Os elementos do vetor após a ordenação:
+	elemento - 1 : 15\\
+	elemento - 2 : 25\\
+	elemento - 3 : 45\\
+	elemento - 4 : 82\\
+	elemento - 5 : 89}
+
+	\item Escreva um programa em C para mostrar como um ponteiro de retorno de função. 
+	\inexample{Insira o primeiro número: 5 \\
+	Insira o segundo número: 6}
+	\example{O número 6 é maior.}
+
+	\item Escreva um programa em C para calcular a soma de todos os elementos em uma matriz usando ponteiros.
+	\inexample{Insira o número de elementos a serem armazenados no vetor (máx. 10): 5 \\
+	Insira 5 números de elementos no vetor:
+	elemento - 1 : 2\\
+	elemento - 2 : 3\\
+	elemento - 3 : 4\\
+	elemento - 4 : 5\\
+	elemento - 5 : 6}
+
+	\example{A soma do vetor é: 20}
+	
+	\newpage
+	\item Escreva um programa em C para imprimir os elementos de um vetor na ordem inversa.
+	\inexample{Insira o número de elementos a serem armazenados no vetor (máx. 15): 5 \\
+	Insira 5 números de elementos no vetor:\\
+	elemento - 1 : 2\\
+	elemento - 2 : 3\\
+	elemento - 3 : 4\\
+	elemento - 4 : 5\\
+	elemento - 5 : 6}
+
+	\example{Os elementos da matriz na ordem inversa são:\\
+	elemento - 5 : 6\\   
+	elemento - 4 : 5\\ 
+	elemento - 3 : 4\\ 
+	elemento - 2 : 3\\      
+	elemento - 1 : 2}      
+
+	\item Escreva um programa em C para imprimir todos o alfabeto usando um ponteiro. 
+	\example{O alfabeto é: A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z}
+
+	\item Escreva um programa em C para imprimir uma string ao contrário usando um ponteiro.
+	\inexample{String de entrada: w3resource}
+	\example{String de saída: ecruoser3w}
+	
+\end{enumerate}
+
+\end{document}

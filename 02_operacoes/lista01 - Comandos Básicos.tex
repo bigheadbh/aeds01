@@ -1,0 +1,75 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.25cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.9cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{1cm}
+
+\begin{center}
+{\Large \bf Lista de Exercícios 01}
+\end{center}
+\vspace{0.8cm}
+
+\begin{enumerate}
+	\item Ler do teclado um número inteiro com três dígitos (no formato CDU - centena, dezena e unidade) e mostrar o número invertido (no formato UDC). O número invertido deve ser armazenado em outra variável antes de ser mostrado.
+
+	\item Sabendo que 100 kilowatt de energia custa um sétimo do salário mínimo, faça um algoritmo que leia o valor do salário mínimo e a quantidade de kilowatt gasta por uma residência, calcule e mostre: o valor em reais de cada kilowatt; o valor em reais a ser pago; e o novo valor a ser pago por essa residência com um desconto de 10\%.
+
+	\item Ler a base e a altura de um retângulo e mostrar o seu perímetro, área e diagonal.
+
+	\item Ler com o raio de um círculo e mostrar o seu perímetro e área.
+
+	\item Ler o lado de um quadrado e mostrar o seu perímetro, área e diagonal.
+
+	\item Ler três números reais a, b e c e mostrar o valor de y sendo $y = a + \frac{b}{c + a} + 2*(a - b) + log_{2}(64)$.
+
+	\item Ler os valores dos catetos de um triângulo retângulo e mostrar a hipotenusa.
+
+	\item Ler a razão e o primeiro termo de uma PA e mostrar o seu decimo termo.
+
+	\item Ler a razão e o primeiro termo de uma PG e mostrar o seu quinto termo.
+
+	\item Ler dois números reais e salva-los nas variáveis A e B. Em seguida, troque dos valores das duas variáveis de forma que a variável A passe a ter o valor da variável B e vice-versa. No final, mostre os valores finais.
+
+	\item Ler o numerador e o denominador de uma fração e transformá-la em um número decimal.
+
+	\item Ler um valor de hora (e minuto), calcular e mostrar quantos minutos se passaram desde o início do dia.
+
+	\item Ler o valor do salário mínimo e o valor do salário de uma pessoa, calcular e mostrar quantos salários mínimos essa pessoa ganha.
+
+\end{enumerate}
+
+\end{document}
+ 

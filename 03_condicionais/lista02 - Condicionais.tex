@@ -1,0 +1,96 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{1cm}
+
+\begin{center}
+{\Large \bf Lista de Exercícios 02}
+\end{center}
+\vspace{0.8cm}
+
+\begin{enumerate}
+	\item Fazer um programa para ler dois números inteiros e calcular e imprimir a diferença desses números. Depois, se o segundo número for diferente de zero, fazer a divisão do primeiro pelo segundo.
+
+    \item Ler um número inteiro, verificar e escrever se ele é divisível ou não por 7.
+
+    \item Ler três números reais, verificar se podem ou não ser lados de um triângulo.
+
+    \item Ler os coeficientes de uma equação do primeiro grau (ax + b = 0), calcular e escrever a raiz da equação.
+
+    \item Ler os coeficientes e os termos independentes de um sistema de equações lineares 2x2. Verificar e escrever se ele tem solução única, infinitas soluções ou não tem solução. Usar determinantes.
+
+    \item Ler os coeficientes de uma equação do 2º grau, determinar e escrever suas raízes reais ou imaginárias.
+
+    \item Ler dois valores reais, determinar e escrever o maior deles, ou os dois se forem iguais.
+
+    \item Ler as medidas dos lados de um triângulo. Verificar e escrever se ele é EQUILÁTERO, ISÓSCELES OU ESCALENO.
+
+    \item Ler as medidas dos lados de um triângulo. Verificar e escrever se ele é ACUTÂNGULO, RETÂNGULO ou OBTUSÂNGULO.
+
+    \item Ler uma data (dia, mês e ano). Verificar e escrever se o ano é bissexto.
+
+	Obs.: Um ano é bissexto se é divisível por 4 e não é divisível por 100 ou então se é divisível por 400.
+
+    \item Ler dois valores reais, determinar e escrever o menor e o maior.
+
+    \item Ler dois caracteres e escreve-los em ordem alfabética.
+
+    \item Ler dois valores reais. Calcular e escrever o quociente do primeiro pelo segundo se este for diferente de zero.
+
+    \item Ler um número real. Determinar e escrever se ele é maior, menor ou igual a zero.
+
+    \item Ler um número inteiro. Se ele for par calcular e escrever o seu quadrado e se for ímpar calcular e escrever seu cubo.
+
+    \item Ler um número inteiro.
+    \begin{itemize}
+        \item Se ele for 1 ou 2, ler as medidas dos lados de um retângulo, calcular e escrever a área do círculo circunscrito a este retângulo.
+        \item Se for 3 ou 4 ou 5, ler a medida do raio de um círculo. Calcular e escrever a área do quadrado inscrito no mesmo.
+        \item Se for outro número inteiro que não estes, ler a medida do lado de um quadrado, calcular e escrever a área da coroa circular formada pelo círculo inscrito e circunscrito a este quadrado.
+    \end{itemize}
+
+    \item Ler um caractere e a medida do raio de um círculo.
+    \begin{itemize}
+        \item Se o caractere lido for T, calcular e escrever a área do triângulo inscrito.
+        \item Se for Q, calcular e escrever a área do quadrado inscrito.
+        \item Se for H, calcular e escrever a área do hexágono inscrito.
+        \item Se for outro caractere que não estes, escrever uma mensagem apropriada.
+    \end{itemize}
+
+\end{enumerate}
+
+\end{document}
+ 

@@ -1,0 +1,143 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\definecolor{myblue}{cmyk}{0.04, 0.13, 0.04, 0.04, 1.00}
+
+\newcommand{\inexample}[1]{	
+	\begin{tcolorbox}
+	\begin{minipage}{0.90\textwidth}
+	\textsc{\textbf{Exemplo Entrada}}\\
+	\texttt{#1}
+	\end{minipage}
+	\end{tcolorbox}
+	}
+
+\newcommand{\example}[1]{	
+	\begin{tcolorbox}[colback = myblue]
+	\begin{minipage}{0.90\textwidth}
+	\textsc{\textbf{Saída Esperada:}}\\
+	\texttt{#1}
+	\end{minipage}
+	\end{tcolorbox}
+	}
+
+
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \bf Lista E X T R A -- Recursão}
+\end{center}
+
+\begin{enumerate}
+	\item Escreva um programa em C para imprimir na tela os $50$ primeiros números naturais usando recursão.
+	\example{Os números naturais são: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50}
+
+	\item Escreva um programa em C para calcular a soma dos números de $1$ a $n$ usando recursão.
+	\inexample{Insira o último número do intervalo começando em 1: 5}
+	\example{A soma dos números de 1 a 5: 15}
+
+	\item Escreva um programa em C para imprimir a série Fibonacci usando recursão. 
+	\inexample{Insira o número de termos para a série (<20): 10}
+	\example{Insira o número de termos para a série (<20): 10 \\
+	A série é: \\
+	1 1 2 3 5 8 13 21 34 55}
+	
+	\newpage
+	\item Escreva um programa em C para imprimir os elementos do array usando recursão. 
+	\inexample{Insira o número de elementos a serem armazenados no vetor: 6 \\
+Insira 6 elementos no vetor: \\
+	elemento - 0 : 2 \\
+	elemento - 1 : 4 \\
+	elemento - 2 : 6 \\
+	elemento - 3 : 8 \\
+	elemento - 4 : 10 \\
+	elemento - 5 : 12}
+	\example{Os elementos no vetor são: 2 4 6 8 10 12}
+
+	\item Escreva um programa em C para contar os dígitos de um determinado número usando recursão. 
+	\inexample{Entre com um número: 50}
+	\example{O número de dígitos do número é: 2}
+
+	\item Escreva um programa em C para encontrar a soma dos dígitos de um número usando recursão.
+	\inexample{Insira qualquer número para encontrar a soma dos dígitos: 25}
+	\example{A soma dos dígitos de 25 = 7}
+
+	\item Escreva um programa em C para encontrar MDC de dois números usando recursão. 
+	\inexample{Insira o Primeiro número: 10 \\
+	Segundo número de entrada: 50}
+	\example{O MDC de 10 e 50 é: 10}
+	
+	\newpage
+	\item Escreva um programa em C para obter o maior elemento de um vetor usando recursão. 
+	\inexample{
+	Insira o número de elementos a serem armazenados no vetor: 5\\
+	Insira 5 elementos no vetor: \\
+	elemento - 0 : 5 \\
+	elemento - 1 : 10 \\
+	elemento - 2 : 15 \\
+	elemento - 3 : 20 \\
+	elemento - 4 : 25}
+	\example{O maior elemento de uma matriz é: 25}
+
+	\item Escreva um programa em C para reverter uma string usando recursão.
+	\inexample{String de entrada: w3resource}
+	\example{A string reversa é: ecruoser3w}
+
+	\item Escreva um programa em C para imprimir números pares ou ímpares em um determinado intervalo usando recursão.
+	\inexample{Insira o intervalo de impressão a partir de 1: 10}
+	\example{Todos os números pares de 1 a 10 são: 2 4 6 8 10 \\
+	Todos os números ímpares de 1 a 10 são: 1 3 5 7 9}
+
+	\item Escreva um programa em C para verificar se uma determinada String é Palíndromo ou não. 
+	\inexample{Insira uma palavra para verificar o palíndromo: mom}
+	\example{A palavra inserida é um palíndromo.}
+
+	\newpage
+
+	\item Escreva um programa em C para copiar uma string para outra usando recursão.
+	\inexample{Insira a string a ser copiada: w3resource}
+	\example{A string foi copiada com sucesso.\\
+	A primeira string é: w3resource\\
+	A string copiada é: w3resource}
+
+	\item Escreva um programa em C para encontrar a primeira letra maiúscula em uma string usando recursão.
+	\inexample{Insira uma string para incluir uma ou mais letras maiúsculas: testString}
+	\example{A primeira letra maiúscula que aparece na string testString é S.}
+
+\end{enumerate}
+\end{document}

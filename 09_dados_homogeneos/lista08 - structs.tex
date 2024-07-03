@@ -1,0 +1,86 @@
+\documentclass[11pt,brazil]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \bf Lista de Exercícios 08 - Structs}
+\end{center}
+
+\begin{enumerate}
+	\item Crie um programa que permita armazenar o nome, a altura e da data de nascimento de até 10 pessoas. Cada pessoa deve ser representada por uma struct dentro de um vetor. A data de nascimento também deve ser uma struct. O nome e a altura de cada pessoa devem ser informados pelo teclado. A geração da data de nascimento deve ser feita aleatoriamente através de uma função.
+
+    \item Crie uma struct para controlar ações de uma bolsa de valores com as seuigntes informações:
+    \begin{itemize}
+        \item Nome da compania
+        \item Área de atuação da compania
+        \item Valor atual da ação (em reais)
+        \item Valor anterior
+        \item Variação da ação em porcentagem (double), ou seja, quanto a ação cresceu ou caiu desde a abertura da bolsa no dia.
+    \end{itemize}
+
+    \item Crie uma struct chamada ponto2d que tenha como atributos os pontos x,y e z. Crie duas estruturas do tipo ponto2d chamadas ponto\_inicial e ponto\_final. Faça um menu com as seguintes opções e implemente-as:  
+    \begin{itemize}
+        \item[1] Digitar o valor do primeiro ponto
+        \item[2] Digitar os valores do segundo ponto
+        \item[3] Mostrar a distância entre os pontos
+        \item[4] Sair
+    \end{itemize}
+    DICA: Distância entre dois pontos $(x1,y1)(x2,y2)$: raiz quadrada de $(x1-x2)^2+(y1-y2)^2$
+
+    \item Defina uma estrutura que irá representar bandas de música.
+    Essa estrutura deve ter o nome da banda, que tipo de música ela toca, o número de integrantes e em que posição do ranking essa banda está dentre as suas 5 bandas favoritas. Crie um looping para preencher as 5 estruturas de bandas criadas no exemplo passado. Após criar e preencher, exiba todas as informações das bandas/estruturas.
+
+    \item Na questão anterior crie uma função que peça o nome de uma banda ao usuário e diga se ela está entre suas bandas favoritas ou não.
+    
+    \newpage 
+    \item Crie uma estrutura representando os alunos de um determinado curso. A estrutura deve
+    conter a matrícula do aluno, nome, nota da primeira prova, nota da segunda prova e nota
+    da terceira prova.
+    \begin{itemize}
+        \item (a) Permita ao usuário entrar com os dados de 5 alunos. 
+        \item (b) Encontre o aluno com maior nota da primeira prova.
+        \item (c) Encontre o aluno com maior média geral. 
+        \item (d) Encontre o aluno com menor média geral 
+        \item (e) Para cada aluno diga se ele foi aprovado ou reprovado, considerando o valor 6 para aprovação.
+    \end{itemize}
+
+    \item Faça um programa que armazene em um registro de dados (estrutura composta) os dados de um funcionário de uma empresa, compostos de: Nome, Idade, Sexo (M/F), CPF, Data de Nascimento, Codigo do Setor onde trabalha (0-99), Cargo que ocupa (string de até 30 caracteres) e Salário. Os dados devem ser digitados pelo usuário, armazenados na estrutura e exibidos na tela.
+
+\end{enumerate}
+
+\end{document}

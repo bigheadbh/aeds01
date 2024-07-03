@@ -1,0 +1,107 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{multicol}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \bf Lista de Exercícios 09 - Classes}
+\end{center}
+
+\begin{enumerate}
+	\item Crie uma classe para representar uma pessoa, com os atributos privados de nome, idade e altura. Crie os métodos públicos  necessários para sets e gets e também um métodos para imprimir os dados de uma pessoa. 
+
+	\item Crie uma classe denominada {\tt Elevador} para armazenar as informações de um elevador dentro de um prédio. A classe deve armazenar o andar atual (0=térreo), total de andares no prédio, excluindo o térreo, capacidade do elevador, e quantas pessoas estão presentes nele.
+
+	A classe deve também disponibilizar os seguintes métodos:
+	
+	\begin{itemize}
+		\item {\tt inicializa}: que deve receber como parâmetros: a capacidade do elevador e o total de andares no prédio (os elevadores sempre começam no térreo e vazios);
+		\item {\tt entra}: para acrescentar uma pessoa no elevador (só deve acrescentar se ainda houver espaço);
+		\item {\tt sai}: para remover uma pessoa do elevador (só deve remover se houver alguém dentro dele);
+		\item {\tt sobe}: para subir um andar (não deve subir se já estiver no último andar);
+		\item {\tt desce}: para descer um andar (não deve descer se já estiver no térreo);
+		\item {\tt get....}: métodos para obter cada um dos os dados armazenados. 
+	\end{itemize}
+	
+	\item Crie uma classe em C++ chamada {\tt Relogio} para armazenar um horário, composto por hora, minuto e segundo. A classe deve representar esses componentes de horário e deve apresentar os métodos descritos a seguir:
+	\begin{itemize}
+		\item um método chamado {\tt setHora}, que deve receber o horário desejado por parâmetro (hora, minuto e segundo);
+		\item um método chamado {\tt getHora} para retornar o horário atual, através de 3 variáveis passadas por referência;
+		\item um método para avançar o horário para o próximo segundo (lembre-se de atualizar o minuto e a hora, quando for o caso). 
+	\end{itemize}
+
+	\item Definir uma classe que represente um círculo. Esta classe deve possuir métodos 	
+	
+	Privados para:
+	\begin{itemize}
+		\item calcular a área do círculo;
+		\item calcular a distância entre os centros de 2 círculos;
+		\item calcular a circunferência do círculo.
+	\end{itemize}
+	
+	E métodos Públicos para:
+	\begin{itemize}
+		\item definir o raio do círculo, dado um número real;
+		\item aumentar o raio do círculo, dado um percentual de aumento;
+		\item definir o centro do círculo, dada uma posição (X,Y);
+		\item imprimir o valor do raio;
+		\item imprimir o centro do círculo.
+		\item imprimir a área do círculo.
+	\end{itemize}
+
+	Criar um programa principal para testar a classe.
+
+	\item Implemente uma classe televisão. A televisão tem um controle de volume do som e um controle de seleção de canal. O controle de volume permite aumentar ou diminuir a potência do volume de som em uma unidade de cada vez. O controle de canal também permite aumentar e diminuir o número do canal em uma unidade, porém, também possibilita trocar para um canal indicado. Também devem existir métodos para consultar o valor do volume de som e o canal selecionado. No programa principal, crie uma televisão e troque de canal algumas vezes. Aumente um pouco o volume, e exiba o valor de ambos os atributos.
+
+	\item Implemente um condicionador de ar. O condicionador possui 10 potências diferentes. Cada unidade da potência do condicionador diminui a temperatura do ambiente em 1.8\textordmasculine C. A variação que o condicionador consegue causar está no intervalo [0\textordmasculine C - 18\textordmasculine C], ou seja, zero graus de variação quando desligado e dezoito graus de variação quando ligado na potência máxima.
+
+	Através de um sensor, o condicionador é informado da temperatura externa. Dada essa temperatura e a potência selecionada, o condicionador calcula e retorna a temperatura do ambiente.
+
+	No programa principal, crie dois condicionadores. Informe duas temperaturas externas diferentes para cada um (ex: 25\textordmasculine C e 31\textordmasculine C), ajuste o segundo em potência máxima (10) e o primeiro em potência média (5). Finalmente, exiba a temperatura resultante de cada ambiente.
+
+\item Implemente um carro. O tanque de combustível do carro armazena no máximo 50 litros de gasolina. O carro consome 15 km/litro. Deve ser possível: \\ 
+	\begin{itemize}
+		\item Abastecer o carro com uma certa quantidade de gasolina;
+		\item Mover o carro em uma determinada distância (medida em km);
+		\item Retornar a quantidade de combustível e a distância total percorrida.
+		\item No programa principal, crie 2 carros. Abasteça 20 litros no primeiro e 30 litros no segundo. Desloque o primeiro em 200 km e o segundo em 400 km. Exiba na tela a distância percorrida e o total de combustível restante para cada um.
+	\end{itemize}
+
+\end{enumerate}
+
+\end{document}

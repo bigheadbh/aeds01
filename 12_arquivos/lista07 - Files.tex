@@ -1,0 +1,88 @@
+\documentclass[11pt,brazil, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[portuges]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{multicol}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\lstset{language=C++}
+
+\begin{tabular*}{18cm}{p{2cm}p{12cm}@{\extracolsep{\fill}}}
+ \multirow{2}{2cm}{\epsfig{file=../../lib/puclogo,width=1.5cm}}
+  &  \vspace{1mm} \sf PONTIFICIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+  & \sf Departamento de Ciência da Computação \\
+  &  \sf Coração Eucarístico \vspace{3mm}  \\
+\end{tabular*}
+\begin{tabular*}{17.2cm}{|p{6cm}|p{5.5cm}|p{2cm}|p{1.95cm}|}
+\hline
+\sf Disciplina & \sf Curso & \sf Turno & \sf Período \\
+
+\multicolumn{1}{|l|}{Algorítmos e Estruturas de Dados I} &
+\multicolumn{1}{c|}{Ciência da Computação} &
+\multicolumn{1}{c|}{Manhã} &
+\multicolumn{1}{l|}{1$^\circ$} \\ \hline \hline
+\multicolumn{4}{|l|}{\sf Professor} \\
+\multicolumn{4}{|l|}{Felipe Cunha (felipe@pucminas.br)} \\ \hline
+\end{tabular*}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \bf Lista de Exercícios 07 - Files}
+\end{center}
+
+\begin{enumerate}
+	\item Suponha que temos dois arquivos cujo as linhas são ordenadas lexigraficamente. Por exemplo, estes arquivos podem conter nomes de pessoas, linha a linha, em ordem alfabética. Escreva um programa que receba, por linha de comando, os nomes destes dois arquivos e de um terceiro. Crie este terceiro arquivo contendo todas as linhas
+destes dois arquivos ordenadas lexicograficamente.
+	\begin{multicols}{2}
+	\begin{verbatim}
+	Arquivo 1:
+	Antonio
+	Berenice
+	Diana
+	Solange
+	Sonia
+	Zuleica
+
+	Arquivo 2:
+	Carlos
+	Celia
+	Fabio
+	Henrique
+
+	Arquivo resultante:
+	Antonio
+	Berenice
+	Carlos
+	Celia
+	Diana
+	Fabio
+	Henrique
+	Solange
+	Sonia
+	Zuleica
+	\end{verbatim}
+	\end{multicols}
+	
+	\item Escreva um programa em C para contar a quantidade de palavras de um arquivo texto.
+	
+	\item Escreva um programa em C que abra um arquivo texto e que conte a quantidade de caracteres armazenados nele. Imprima o número na tela. O programa deve solicitar ao usuário que digite o nome do arquivo.
+	
+	\item Escreva um programa em C que solicite ao usuário a digitação do nome de um arquivo texto já existente, e que então gere um outro arquivo, que será uma cópia do primeiro.
+	
+	\item Considere um arquivo texto que armazene números em ponto flutuante em cada uma de suas linhas. Escreva um programa em C que determine o valor máximo, o valor mínimo e a média desses valores armazenados no arquivo. Imprima esses valores na tela.
+
+\end{enumerate}
+
+\end{document}
